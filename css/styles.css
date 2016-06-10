@@ -1,0 +1,90 @@
+/*Container for all elements and content below the nav and filters container*/
+.songsWrapper {
+  border-radius: 4px;
+  background-image: url("http://blog.hdwallsource.com/wp-content/uploads/2016/02/solid-color-wallpaper-21955-22508-hd-wallpapers.jpg"); }
+
+/*Container for all elements on the 'add music' page*/
+.songPageDiv {
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold; }
+
+/*Container for the playlist only*/
+.playlistDiv {
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 4px; }
+
+/*Album cover thumbnail*/
+.thumbnail {
+  background-color: transparent; }
+
+/*First column div on 'add music' selection page*/
+.selectGenreTitle {
+  margin-top: 14px;
+  text-align: right; }
+
+/*Text inputs on 'add music' page*/
+.textBoxDiv {
+  margin-top: 10px; }
+
+.textBoxLabel {
+  margin-top: 10px; }
+
+.saveSongButtonDiv {
+  margin: 40px 60px 0px 0px; }
+
+/*Container for filtering a music selection*/
+.filtersDiv {
+  padding: 0;
+  height: 124px; }
+
+.filterDropdowns {
+  margin-top: 12px; }
+
+.pageHeader h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  color: midnightblue; }
+
+#loginModal {
+  margin-top: 5%; }
+
+#optionBar {
+  text-align: right; }
+
+#optionBar span {
+  border-right: 1px solid white; }
+
+#optionBar span a {
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+#optionBar span a:hover {
+  color: lightgrey;
+  text-decoration: none; }
+
+#optionBar span a:last-child {
+  border: none; }
+
+.messageDiv {
+  margin-top: 40px; }
+
+#logoutMsg {
+  text-align: center;
+  color: midnightblue;
+  font-weight: 700;
+  font-size: 20px; }
+
+body {
+  background-color: floralwhite; }
+
+/*Hides all elements*/
+.hide {
+  visibility: hidden;
+  height: 0;
+  width: 0; }

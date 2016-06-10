@@ -1,0 +1,23 @@
+{
+  "name": "musichistory",
+  "description": "This is the project that you will be working for your individual work throughout the entire front end course. Don't worry, you'll be building lots of other applications, but when you learn a new technique, library or language, you'll be cutting your teeth with it on Music History.",
+  "main": "index.js",
+  "authors": [
+    "Jeremy C. Swain <jeremycswain@icloud.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/JeremyCSwain/musichistory-boilerplate",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angularfire": "^1.1.4",
+    "angular-route": "^1.5.0"
+  }
+}

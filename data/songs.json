@@ -1,0 +1,25 @@
+{
+  "songs": {
+    "One": {
+      "title": "The Walk",
+      "artist": "Mayer Hawthorne",
+      "album": "How Do You Do",
+      "image": "http://ecx.images-amazon.com/images/I/81ee7SFNkVL._SL1500_.jpg",
+      "genre": "rock"
+    },
+    "Two": {
+      "title": "Medicine",
+      "artist": "Grace Potter",
+      "album": "Grace Potter and the Nocturnals",
+      "image": "http://assets.fontsinuse.com/static/use-media-items/22/21905/full-2700x2700/56703776/4581122023_916dc53aa2_o_d.jpeg?resolution=0",
+      "genre": "rock"
+    },
+    "Three": {
+      "title": "Legs",
+      "artist": "ZZ Top",
+      "album": "Eliminator",
+      "image": "http://demonszone.com/wp-content/uploads/sites/8/2014/06/Eliminator.jpg",
+      "genre": "rock"
+    }
+  }
+}

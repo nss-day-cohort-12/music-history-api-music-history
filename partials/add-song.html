@@ -1,0 +1,124 @@
+
+<!-- Log out bar -->
+<div class="optionContainer">
+	<div id="optionBar" class="bg-primary">
+		<span id="logoutBtn"><a href="#/logout">Log Out</a></span>
+		<span id="accountBtn"><a href="#">Account</a></span>
+		<span id="settingsBtn"><a href="#">Settings</a></span>
+	</div>
+</div>
+
+<!-- Main logo header -->
+<div id="mainHeader" class="container head-container">
+	<div class="row">
+		<div class="page-header pageHeader">
+	  	<h1>Music History Project <small>Start your own musical journey.</small></h1>
+		</div>	
+	</div>
+</div>
+
+<!-- Navigation Container with nav buttons and filter menu-->
+<div id="navbar" class="container nav-container">
+	<div class="row">
+
+		<div class="col-md-2">
+			<ul class="nav nav-pills nav-stacked">
+  			<li id=homeNavBtn role="presentation" class="active"><a href="#">Home</a></li>
+  			<li id="viewMusicNavBtn" role="presentation"><a href="#">My Music</a></li>
+  			<li id="addMusicNavBtn" role="presentation"><a href="#">Add Music</a></li>
+			</ul>	
+		</div>
+
+		<div id="filtersId" class="col-md-10 well hidden-xs filtersDiv">
+
+			<div class="col-sm-3 filterDropdowns">
+				<label>Find Artist:</label>
+				<select id="artistSelect" class="form-control artistOptions">
+					<option>Select Artist</option>
+					<!-- NEW OPTIONS ARE INPUT HERE -->
+				</select>
+			</div>
+			<div class="col-sm-3 filterDropdowns">
+				<label>Find Album:</label>
+				<select id="albumSelect" class="form-control albumOptions">
+					<option>Select Album</option>
+					<!-- NEW OPTIONS ARE INPUT HERE -->
+				</select>
+			</div>
+			<div class="col-sm-3 filterRadios">
+				<label class="radio"><input type="radio">  Rock</label>
+  			<label class="radio"><input type="radio">  R&B</label>
+  			<label class="radio"><input type="radio">  Hip-Hop</label>
+  			<label class="radio"><input type="radio">  Classical</label>
+			</div>
+			<div class="col-sm-3 filterRadios">
+				<label class="radio"><input type="radio">  Pop</label>
+  			<label class="radio"><input type="radio">  Country</label>
+  			<label class="radio"><input type="radio">  Dance</label>
+  			<label class="radio"><input type="radio">  Other</label>
+			</div>
+		<!-- End filtersDiv -->
+		</div>
+	<!-- End Row -->
+	</div>
+<!-- End Nav Container -->
+</div>
+
+<!-- Container for addSongPage and playlistDiv -->
+<div id="primary-container" class="container song-container songsWrapper">
+	<div class="row">
+		<!-- songPageDiv includes form, label, and inputs for adding music to playlist. -->
+		<div id="addSongPage" class="hide songPageDiv form-horizontal col-md-12">
+
+			<div class="form-group">
+  			<label class="col-sm-2 control-label textBoxLabel">Song Title:</label>
+  			<div class="col-sm-10 textBoxDiv">
+  				<input id="newSongBox" type="text" class="form-control textInputBox" placeholder="Enter Song Title">
+  			</div>
+  			<label class="col-sm-2 control-label textBoxLabel">Artist Name:</label>
+  			<div class="col-sm-10 textBoxDiv">
+ 					<input id="newArtistBox" type="text" class="form-control textInputBox" placeholder="Enter Artist Name">
+ 				</div>
+  			<label class="col-sm-2 control-label textBoxLabel">Album Title:</label>
+ 				<div class="col-sm-10 textBoxDiv">
+  				<input id="newAlbumBox" type="text" class="form-control textInputBox" placeholder="Enter Album Title">
+  			</div>
+  			<div class="col-sm-3"><p class="selectGenreTitle">Select Genre: </p></div>
+  			<div class="form-group radio addMusicRadio col-sm-3">
+  				<label class="radio"><input type="radio">  Rock</label>
+  				<label class="radio"><input type="radio">  R&B</label>
+  				<label class="radio"><input type="radio">  Hip-Hop</label>
+  				<label class="radio"><input type="radio">  Classical</label>
+  			</div>
+  			<div class="form-group radio addMusicRadio col-sm-3">
+  				<label class="radio"><input type="radio">  Pop</label>
+  				<label class="radio"><input type="radio">  Country</label>
+  				<label class="radio"><input type="radio">  Dance</label>
+  				<label class="radio"><input type="radio">  Other</label>
+      	</div>
+  			<div class="col-sm-3 saveSongButtonDiv">
+					<button id="saveNewSongBtn" type="button" class="btn btn-default btn-lg btn-block">Add Music to Playlist</button>
+  			</div>
+      </div>
+
+    <!-- End addSongPage -->
+		</div>
+	<!-- End row -->
+	</div>
+<!-- End song-container songsWrapper -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

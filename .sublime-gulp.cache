@@ -1,0 +1,1 @@
+{"/Users/Jeremy/workspace/musichistory/gulpfile.js":{"sha1":"4e0750377f5d561607200da12e90c4c008b73e49","tasks":{"default":{"name":"default","dependencies":"sassify watch"},"watch":{"name":"watch","dependencies":""},"lint":{"name":"lint","dependencies":""},"sassify":{"name":"sassify","dependencies":""}}}}

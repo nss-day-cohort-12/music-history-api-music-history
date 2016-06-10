@@ -1,0 +1,59 @@
+@import '_nav-container';
+
+$font-blue: midnightblue;
+
+.pageHeader {
+  h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+    color: $font-blue;
+  }
+}
+
+#loginModal {
+	margin-top: 5%;
+}
+
+#optionBar {
+	text-align: right;
+}
+
+#optionBar {
+	span {
+		border-right: 1px solid white;
+	}
+}
+
+#optionBar {
+	span a {
+		color: white;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+#optionBar {
+	span a:hover {
+	color: lightgrey;
+	text-decoration: none;
+	}
+}
+
+#optionBar {
+	span a:last-child{
+	border: none;
+	}
+}
+
+.messageDiv {
+	margin-top: 40px;
+}
+
+#logoutMsg {
+	text-align: center;
+	color: $font-blue;
+	font-weight: 700;
+	font-size: 20px;
+}
+
