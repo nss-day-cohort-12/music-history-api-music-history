@@ -18,28 +18,30 @@ app.controller("logInCtrl",
     $scope.message = "";
 
 
-    /*
-      Attempt to register a new user account.
-      If successful, immediately log user in.
-     */
-    $scope.register = () => {
+    $scope.account = {email: "", password: ""};
+    $scope.newAccount = {email: "", password: "", username: ""};
+
+
+    // Registers a new user and creates a new user_data object.
+    $scope.register = function () {
+      $scope.account = $scope.newAccount;
       ref.createUser({
-        email    : $scope.account.email,
-        password : $scope.account.password
-      }, (error, userData) => {
+        // Set user with email and pw
+        email: $scope.account.email,
+        password: $scope.account.password
+      }, function (error, userData) {
         if (error) {
           console.log(`Error creating user: ${error}`);
         } else {
-          console.log(`Created user account with uid: ${userData.uid}`);
+          console.log(`Created user account with UID: ${userData.uid}`, userData);
+          authFactory.storeUser(userData.uid, $scope.account.email, $scope.account.username);
           $scope.login();
         }
       });
     };
 
-    /*
-      Attempt to authenticate the user with the
-      supplied credentials.
-     */
+    
+    // Attempt to authenticate the user with the supplied credentials.
     $scope.login = () => 
       authFactory
         .authenticate($scope.account)

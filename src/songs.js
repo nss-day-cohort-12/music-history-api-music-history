@@ -45,25 +45,6 @@ $('#registerBtn').click(function() {
 
 });
 
-// $('#facebookBtn').click(function () {
-// 	var FBref = new Firebase("https://torrid-heat-5160.firebaseio.com/");
-// 	ref.authWithOAuthPopup("facebook", function(error, authData) {
-// 	  if (error) {
-// 	    console.log("Login Failed!", error);
-// 	  } else {
-// 	    console.log("Authenticated successfully with payload:", authData);
-
-// 	    $('.optionContainer').slideDown('slow');
-// 	    $('#navbar').show();
-// 			$('#primary-container').show()
-// 			$('#mainHeader').show();
-// 			$('.messageDiv').hide();
-// 			$('#loginModal').hide();
-// 			$('#exampleModal').modal('hide');
-// 	  }
-// 	});
-// });
-
 
 $('#loginBtn').click(function() {
 	let regEmail = $('#login_name').val();
@@ -125,15 +106,6 @@ $.ajax({
   method: "GET"
 	}).done(function(songsObj) {
 	console.log("Songs Object:", songsObj);
-
-	// The 'for in' loop is for iterating over keys in an object.
-	// for (let song in songsObj) {
-	// 	let currentSong = songList[song];
-
-	// 	currentSong.album;
-	// 	currentSong.artist;
-	// 	currentSong.title;
-	// };
 
 	// Object.keys returns an array of keys.
 	let songKeys = [];
