@@ -14,7 +14,7 @@ app.factory("song-factory", function($q, $http) {
       .success(
         function(songsObj) {
           resolve(songsObj);
-          console.log("songsObj", songsObj);
+          // console.log("songsObj", songsObj);
         },function(error) {
           reject(error);
           console.log("Error:", error);

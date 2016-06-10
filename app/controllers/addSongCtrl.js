@@ -10,7 +10,30 @@ app.controller("addSongCtrl", [
   function ($scope, $http, $location, songFactory) {
     // Default property values for keys bound to input fields
     $scope.songs = [];
+    $scope.name;
+    $scope.artist;
+    $scope.album;
+    $scope.genre;
 
+    $scope.checkGenre = function () {
+      if ($('#Rock').is(':checked')) {
+        $scope.genre = "Rock";
+      } else if ($('#RB').is(':checked')) {
+        $scope.genre = "R & B";
+      } else if ($('#HipHop').is(':checked')) {
+        $scope.genre = "Hip-Hop";
+      } else if ($('#Classical').is(':checked')) {
+        $scope.genre = "Classical";
+      } else if ($('#Pop').is(':checked')) {
+        $scope.genre = "Pop";
+      } else if ($('#Country').is(':checked')) {
+        $scope.genre = "Country";
+      } else if ($('#Dance').is(':checked')) {
+        $scope.genre = "Dance";
+      } else if ($('#Other').is(':checked')) {
+        $scope.genre = "Other";
+      }
+    };
 
     // Invoke the promise that reads from Firebase
     songFactory().then(
@@ -38,9 +61,10 @@ app.controller("addSongCtrl", [
         // Remember to stringify objects/arrays before
         // sending them to an API
         JSON.stringify({
-          title: $scope.song.title,
-          artist: $scope.song.artist,
-          album: $scope.song.album,
+          title: $scope.name,
+          artist: $scope.artist,
+          album: $scope.album,
+          genre: $scope.genre
         })
 
       // The $http.post() method returns a promise, so you can use then()

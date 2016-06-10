@@ -53,7 +53,7 @@ app.factory("authFactory", (firebaseURL, $http) => {
       userRef.set({
         uid: authData,
         email: userEmail,
-        userName: userName
+        username: userName
       });
     }
 

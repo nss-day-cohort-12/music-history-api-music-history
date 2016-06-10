@@ -31,7 +31,7 @@ app.controller("songListCtrl", [
               songsObj[key].id = key;
               $scope.songs.push(songsObj[key]);
             })
-            console.log($scope.songs); 
+            console.log("Songs Array", $scope.songs); 
             },
 
             // Handle reject() from the promise
