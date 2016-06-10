@@ -14,6 +14,7 @@ app.controller("addSongCtrl", [
     $scope.artist;
     $scope.album;
     $scope.genre;
+    $scope.image;
 
     $scope.checkGenre = function () {
       if ($('#Rock').is(':checked')) {
@@ -64,7 +65,8 @@ app.controller("addSongCtrl", [
           title: $scope.name,
           artist: $scope.artist,
           album: $scope.album,
-          genre: $scope.genre
+          genre: $scope.genre,
+          image: $scope.image
         })
 
       // The $http.post() method returns a promise, so you can use then()
@@ -76,15 +78,6 @@ app.controller("addSongCtrl", [
       $scope.findTitle = "";
 
     };
-
-
-
-
-
-
-
-
-
 
   // End dependancy function
   }

@@ -16,6 +16,9 @@ app.controller("songListCtrl", [
     let ref = new Firebase(firebaseURL);
 
     $scope.songs = [];
+    // $scope.artistFilter;
+    // $scope.albumFilter;
+    // $scope.genreFilter;
 
     // Get current user object
     authFactory.getUser().then(UserObj => {
