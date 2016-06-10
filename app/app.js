@@ -26,18 +26,20 @@ app.config(["$routeProvider",
       }).
       when('/songlist', {
         templateUrl: 'partials/song-list.html',
-        controller: 'songListCtrl'
+        controller: 'songListCtrl',
+        resolve: {isAuth}
       }).
       when('/addsong', {
         templateUrl: 'partials/add-song.html',
-        controller: 'addSongCtrl'
+        controller: 'addSongCtrl',
+        resolve: {isAuth}
       }).
       // when('/logout', {
       //   templateUrl: 'partials/log-out.html',
       //   controller: 'logOutCtrl'
       // }).
       otherwise({
-        redirectTo: '/login'
+        redirectTo: '/songlist'
       });
   }]);
 
