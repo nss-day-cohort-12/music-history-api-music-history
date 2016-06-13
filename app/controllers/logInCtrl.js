@@ -19,7 +19,7 @@ app.controller("logInCtrl",
 
 
     $scope.account = {email: "", password: ""};
-    $scope.newAccount = {email: "", password: "", username: ""};
+    $scope.newAccount = {email: "", password: ""};
 
 
     // Registers a new user and creates a new user_data object.
@@ -34,7 +34,7 @@ app.controller("logInCtrl",
           console.log(`Error creating user: ${error}`);
         } else {
           console.log(`Created user account with UID: ${userData.uid}`, userData);
-          authFactory.storeUser(userData.uid, $scope.account.email, $scope.account.username);
+          authFactory.storeUser(userData.uid, $scope.account.email);
           $scope.login();
         }
       });
@@ -49,7 +49,6 @@ app.controller("logInCtrl",
           $location.path("/songlist");
           $scope.$apply();  // Needed for $location.path() to succeed
         });
-
 
   }
 ]);

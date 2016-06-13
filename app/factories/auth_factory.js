@@ -52,8 +52,7 @@ app.factory("authFactory", (firebaseURL, $http) => {
       let userRef = new Firebase(`${firebaseURL}/user_data/${authData}`);
       userRef.set({
         uid: authData,
-        email: userEmail,
-        userName: userName
+        email: userEmail
       });
     }
 

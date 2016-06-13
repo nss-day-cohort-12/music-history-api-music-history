@@ -16,6 +16,9 @@ app.controller("songListCtrl", [
     let ref = new Firebase(firebaseURL);
 
     $scope.songs = [];
+    // $scope.artistFilter;
+    // $scope.albumFilter;
+    // $scope.genreFilter;
 
     // Get current user object
     authFactory.getUser().then(UserObj => {
@@ -31,7 +34,7 @@ app.controller("songListCtrl", [
               songsObj[key].id = key;
               $scope.songs.push(songsObj[key]);
             })
-            console.log($scope.songs); 
+            console.log("Songs Array", $scope.songs); 
             },
 
             // Handle reject() from the promise
@@ -49,7 +52,14 @@ app.controller("songListCtrl", [
         $http.get("https://torrid-heat-5160.firebaseio.com/songs.json"),
         console.log("Song " + song.id + " deleted from collection.")
       )
-    };
+      .then(
+        // After adding comment to database, return to the main portal
+        function () {
+          $location.path('#/songlist');
+        }
+      )
+    }
+
 
     // Unauth through Firebase/LogOut
     $scope.logout = () => {

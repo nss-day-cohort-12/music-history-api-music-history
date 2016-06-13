@@ -41,7 +41,8 @@ app.config(["$routeProvider",
       otherwise({
         redirectTo: '/songlist'
       });
-  }]);
+  }]
+);
 
 
 /*
