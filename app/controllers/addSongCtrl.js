@@ -73,7 +73,13 @@ app.controller("addSongCtrl", [
       ).then(
         () => console.log("Added song to firebase"),// Handle resolve
         (response) => console.log(response)  // Handle reject
-      );
+      )
+      .then(
+        // After adding comment to database, return to the main portal
+        function () {
+          $location.path('/songlist');
+        }
+      )
 
       $scope.findTitle = "";
 

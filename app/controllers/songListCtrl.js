@@ -52,7 +52,14 @@ app.controller("songListCtrl", [
         $http.get("https://torrid-heat-5160.firebaseio.com/songs.json"),
         console.log("Song " + song.id + " deleted from collection.")
       )
-    };
+      .then(
+        // After adding comment to database, return to the main portal
+        function () {
+          $location.path('#/songlist');
+        }
+      )
+    }
+
 
     // Unauth through Firebase/LogOut
     $scope.logout = () => {
