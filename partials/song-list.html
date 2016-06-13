@@ -36,7 +36,7 @@
 				<select id="artistSelect" class="form-control artistOptions">
 					<option>Select Artist</option>
 					<!-- NEW OPTIONS ARE INPUT HERE -->
-					<option ng-repeat="song in songs">{{ song.artist }}</option>
+					<option ng-repeat="song in songs">{{ song.Artist }}</option>
 				</select>
 			</div>
 			<div class="col-sm-3 filterDropdowns">
@@ -44,7 +44,7 @@
 				<select id="albumSelect" class="form-control albumOptions">
 					<option>Select Album</option>
 					<!-- NEW OPTIONS ARE INPUT HERE -->
-					<option ng-repeat="song in songs">{{ song.album }}</option>
+					<option ng-repeat="song in songs">{{ song.AlbumName }}</option>
 				</select>
 			</div>
 
@@ -76,10 +76,10 @@
 		
 		<div class="panel panel-default col-md-10">
 	 		<div class="panel-heading">
-	   		<h3 class="panel-title">{{song.title}}</h3>
+	   		<h3 class="panel-title">{{song.SongName}}</h3>
 			</div>
 			<div class="panel-body">
-		  	<div class="col-md-11"><strong>{{song.artist}}</strong> - {{song.album}}
+		  	<div class="col-md-11"><strong>{{song.Artist}}</strong> - {{song.AlbumName}}
 		  	</div>
 		  	<div class="col-md-1">
 		  		<button id="{{song.id}}" class="btn btn-primary" ng-click="deleteSong(song)">Delete</button>
@@ -88,7 +88,7 @@
 		</div>
 		<div class="albumCover col-md-2">
 			<a href="#" class="thumbnail">
-	  		<img class"image-responsive" alt="Album Cover" ng-src="{{song.image}}">
+	  		<img class"image-responsive" alt="Album Cover" ng-src="{{song.Image}}">
 			</a>
 		</div> 
 

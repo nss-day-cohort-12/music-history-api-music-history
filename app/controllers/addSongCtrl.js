@@ -5,16 +5,21 @@ app.controller("addSongCtrl", [
   "$scope",
   "$http",
   "$location",
+  "authFactory",
   "song-factory",
 
-  function ($scope, $http, $location, songFactory) {
+  function ($scope, $http, $location, authFactory, songFactory) {
     // Default property values for keys bound to input fields
     $scope.songs = [];
     $scope.name;
     $scope.artist;
     $scope.album;
+    $scope.year;
     $scope.genre;
     $scope.image;
+    $scope.currAlbumId;
+
+    let user = {};
 
     $scope.checkGenre = function () {
       if ($('#Rock').is(':checked')) {
@@ -55,22 +60,54 @@ app.controller("addSongCtrl", [
     );
 
     $scope.add = function () {
-      // POST the song to Firebase
-      $http.post(
-        "https://torrid-heat-5160.firebaseio.com/songs.json",
-
-        // Remember to stringify objects/arrays before
-        // sending them to an API
-        JSON.stringify({
-          title: $scope.name,
-          artist: $scope.artist,
-          album: $scope.album,
-          genre: $scope.genre,
-          image: $scope.image
-        })
-
+      authFactory.getUser().then(UserObj => {
+        user = UserObj;
+        }
+      )
+      .then(
+        function () {
+          $http.post(
+            "http://localhost:55630/api/User",
+            JSON.stringify({
+              Username: user.Username,
+              EmailAddress: user.EmailAddress,
+              Artist: $scope.artist
+            })
+          )
+        }
+      )
+      .then(
+        function () {
+          $http.post(
+            "http://localhost:55630/api/Album",
+            JSON.stringify({
+              Name: $scope.album,
+              Year: $scope.year,
+              Artist: $scope.artist,
+              MHUserId: user.MHUserId
+            })
+          )
+        }
+      )
+      .then(
+        function () {
+        // POST the song to Firebase
+        $http.post(
+          "http://localhost:55630/api/Song",
+          // Remember to stringify objects/arrays before
+          // sending them to an API
+          JSON.stringify({
+            Name: $scope.name,
+            AlbumId: 1,
+            Artist: $scope.artist,
+            album: $scope.album,
+            genre: $scope.genre,
+            image: $scope.image
+          })
+        )}
       // The $http.post() method returns a promise, so you can use then()
-      ).then(
+      )
+      .then(
         () => console.log("Added song to firebase"),// Handle resolve
         (response) => console.log(response)  // Handle reject
       )

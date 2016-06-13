@@ -10,7 +10,7 @@ app.factory("song-factory", function($q, $http) {
 
       // Perform some asynchronous operation, resolve or reject 
       // the promise when appropriate.
-      $http.get('https://torrid-heat-5160.firebaseio.com/songs.json')
+      $http.get('http://localhost:55630/api/Song')
       .success(
         function(songsObj) {
           resolve(songsObj);
