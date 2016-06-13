@@ -47,10 +47,10 @@ app.controller("songListCtrl", [
     );
 
     $scope.deleteSong = function (song) {
-      $http.delete("https://torrid-heat-5160.firebaseio.com/songs/" + song.id + ".json")
+      $http.delete("http://localhost:55630/api/Song/" + song.id)
       .then(
-        $http.get("https://torrid-heat-5160.firebaseio.com/songs.json"),
-        console.log("Song " + song.id + " deleted from collection.")
+        $http.get("http://localhost:55630/api/Song")
+        // console.log("Song " + song.id + " deleted from collection.")
       )
       .then(
         // After adding comment to database, return to the main portal
